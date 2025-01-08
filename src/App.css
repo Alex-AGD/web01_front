@@ -1,26 +1,30 @@
-body {
-  margin: 0;
-  color: #fff;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  background-image: linear-gradient(to bottom, #020917, #101725);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.content {
+.user-list {
   display: flex;
-  min-height: 100vh;
-  line-height: 1.1;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.content h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
+.user-card {
+  background: #1e293b;
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  flex: 1 1 calc(33.333% - 20px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.content p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.5;
+.user-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.user-card p {
+  font-size: 1rem;
+  opacity: 0.8;
 }

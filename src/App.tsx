@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from './config';
-
+import './App.css';
 interface IUser {
     id: number;
     name: string;
@@ -22,17 +22,16 @@ const App: React.FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             <h1>Список пользователей</h1>
-            <ul>
+            <div className="user-list">
                 {users.map((user) => (
-                    <li key={user.id}>
-                        Имя пользователя: {user.name}
-                        <br/>
-                        Email пользователя: {user.email}
-                    </li>
+                    <div key={user.id} className="user-card">
+                        <h2>{user.name}</h2>
+                        <p>{user.email}</p>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
